@@ -1,14 +1,8 @@
 ﻿$(function(){
-	$('.banner li').each(function(){
-		var box = $(this);
-		box.hover(
-			function(){
-				box.find('>a').stop(true,true).animate({'margin-left':'75px'},500);
-			},
-			function(){
-				box.find('>a').stop(true,true).animate({'margin-left':'0px'},500);
-			}
-		); 
+	$('.sub_list .box1').hover(function(){
+		$('.sub_list .box1 a img').stop(true, true).animate({'margin-top':'-97px'},250);
+	},function(){
+		$('.sub_list .box1 a img').stop(true, true).animate({'margin-top':'0'},250);
 	});
 
 
