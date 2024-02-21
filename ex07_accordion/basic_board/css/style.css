@@ -30,9 +30,8 @@ h1{background: url(../images/table_bg.png) no-repeat left center; height: 50px; 
 #board .title2{width: 500px; text-align: justify;}
 #board .content_wrap{height: auto; width: 96%; text-align: left; padding: 2%; display: none;}
 
-#board input:checked ~ div.content_wrap{display: block;}
-#board input:checked ~ div.title2 > label{cursor: default;}
-#board label{cursor: pointer; line-height: 50px; height: 50px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+#board .title2>div{cursor: pointer; line-height: 50px; height: 50px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .subject{text-align: justify; font-weight: bold; font-size: 16px; background: #dfdfdf; padding: 10px 20px; line-height: 26px;}
 .content{text-align: justify; padding: 10px 20px; background: #ffffff; line-height: 24px; border-bottom: 1px solid #dddddd;}
 

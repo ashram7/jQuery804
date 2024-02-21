@@ -1,0 +1,39 @@
+﻿@import url(common.css);
+
+.box_in .box {width:176px;height:176px;}
+
+/* 보여지는 가로와 세로크기 */
+.box_in .box>div{ width:176px;height:176px;overflow:hidden;}
+/*이미지 아래로 내림 */	
+.box_in .box .box1>a>img{  
+	position:absolute;top:176px;left:0;}
+.box_in .box .box1>a{  /* 이미지_off  */
+	display:block;position:relative;width:176px;height:176px;background:url(../image/point.png) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,22 +1,22 @@
 ﻿$(function(){
+	// 그 내용을 멋지게 요약해서 넣어라!!!
+	var guideClass = 'guide';
 	$('.guideText').each(function(){
 		var guideText = this.defaultValue;
-		// giudeText="이름을 입력해 주세요"
 		var element = $(this);
 		element.focus(function(){
 			if(element.val()===guideText){
 				element.val('');
-				element.removeClass('guide');
+				element.removeClass(guideClass);
 			}
-		});
-		element.blur(function(){
+		}).blur(function(){
 			if(element.val()===''){
 				element.val(guideText);
-				element.addClass('guide');
+				element.addClass(guideClass);
 			}
 		});
 		if(element.val()===guideText){
-			element.addClass('guide');
+			element.addClass(guideClass);
 		}		
 	});
 });
