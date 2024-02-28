@@ -10,28 +10,15 @@
 		var index = $(this).attr('data-index');
 		moveSlider(index);
 	});	
+	setInterval(function(){
+		randomNumber++;
+		if(randomNumber==(size)){randomNumber=0;}
+		moveSlider(randomNumber);
+	},1000);
+	
 	function moveSlider(index){
 		var willMoveLeft;
 		var willMoveTop;
-		/* if (index == 0){ 
-			willMoveLeft = -(index * 600);
-			willMoveTop  = -(0 * 400);}
-		else if (index == 1){
-			willMoveLeft = -(index * 600);
-			willMoveTop  = -(0 * 400);}
-		else if (index == 2){
-			willMoveLeft = -(index * 600);
-			willMoveTop  = -(0 * 400);}
-		else if (index == 3){
-			willMoveLeft = -(0 * 600);
-			willMoveTop  = -(1 * 400);}
-		else if (index == 4){
-			willMoveLeft = -(1 * 600);
-			willMoveTop  = -(1 * 400);}
-		else  {
-			willMoveLeft = -(2 * 600);
-			willMoveTop  = -(1 * 400);}
-		} */
 		var willMoveLeft = -(index%3*panel_width);
 		var willMoveTop = Math.floor(index/3)*-panel_height;	
 		$('.slider_panel').animate({ left: willMoveLeft }, '500');
@@ -41,7 +28,7 @@
 		$('.slider_text[data-index='+index+']').show().animate({left: 20},500);
 		$('.slider_text[data-index!='+index+']').hide().animate({left: -300},500);
 	};
-	size = $('.slider_text').size();
+	var size = $('.slider_text').size();
 	var randomNumber = Math.round(Math.random()*(size-1));
 	moveSlider(randomNumber);
 });
